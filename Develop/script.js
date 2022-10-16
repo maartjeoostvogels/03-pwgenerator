@@ -16,6 +16,7 @@ function generatePassword() {
     return 'Invalid, password length should be between 8 and 128'
   }
 
+  // Prompt for character types
   var useLowerCase = confirm("Would you like the password to include lowercase characters?");
   var useUpperCase = confirm("Would you like the password to include uppercase characters?");
   var useNumbers = confirm("Would you like the password to include numbers?");
@@ -36,6 +37,11 @@ function generatePassword() {
 
   if (useSpecialCharacters) {
     characters = characters.concat(special);
+  }
+
+  // Check that at least one character type has been selected
+  if (characters.length == 0) {
+    return 'Invalid, please select at least one character type'
   }
 
   // Generate a password
