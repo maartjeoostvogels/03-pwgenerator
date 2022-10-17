@@ -11,7 +11,7 @@ function generatePassword() {
 
   // Prompt for password length
   var defaultPasswordLength = 8;
-  var minPasswordLength = 6;
+  var minPasswordLength = 8;
   var maxPasswordLength = 128;
   var passwordLength = prompt('What length password?  Please enter a number between 8 and 128', defaultPasswordLength);
   if (passwordLength < minPasswordLength || passwordLength > maxPasswordLength) {
